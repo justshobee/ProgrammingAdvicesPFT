@@ -6,7 +6,7 @@
 /*   By: shobeedev <https://shobee.space/>                   / __/   ___) |   */
 /*                                                          |_____| |____/    */
 /*   Created: 2026/02/08 09:19:43 by shobeedev               shobee4ever      */
-/*   Updated: 2026/02/08 12:40:21 by shobeedev            tfaaty fi l3oolaa   */
+/*   Updated: 2026/02/27 21:58:38 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ bool isSpace(char lett)
 	return (lett == ' ' || lett == '\t' || lett == '\n' || lett == '\v' );
 }
 
-vector<string> spliteWord(string str,char sep)
+vector<string> splitWord(string str,char sep)
 {
 	vector<string> vString;
 	int i = 0;
@@ -54,7 +54,7 @@ int main()
 	getline(cin,str);
 	cout << "Enter a separator : ";
 	cin >> sep;
-	vector vString = spliteWord(str,sep);
+	vector vString = splitWord(str,sep);
 	for(string str : vString)
 		cout << str << endl;
 
