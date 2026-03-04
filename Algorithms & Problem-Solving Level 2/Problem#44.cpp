@@ -6,7 +6,7 @@
 /*   By: shobeedev <https://shobee.space/>                   / __/   ___) |   */
 /*                                                          |_____| |____/    */
 /*   Created: 2026/03/03 11:47:58 by shobeedev               shobee4ever      */
-/*   Updated: 2026/03/04 08:38:34 by shobeedev            tfaaty fi l3oolaa   */
+/*   Updated: 2026/03/04 09:08:42 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ struct stClinetInfo
 	string PinCode = "";
 	string NameCl = "";
 	string PhoneCl = "";
-	string AccBlance;
+	double AccBlance;
 };
 bool CompCases(string str,string sep,int pos)
 {
@@ -65,7 +65,17 @@ vector <string> tt_splite(string str,string sep)
 
 	return record;
 }
-
+int ConvertstrTonbr(string str)
+{
+	int i = 0;
+	int oldnbr = 0;
+	while(i < str.size())
+	{
+		oldnbr = (str[i] - '0') + oldnbr * 10;
+		i++;
+	}
+	return oldnbr;
+}
 stClinetInfo ConvToStruct(vector<string> record)
 {
 	stClinetInfo info;
@@ -74,7 +84,7 @@ stClinetInfo ConvToStruct(vector<string> record)
 	info.PinCode = record[1];
 	info.NameCl = record[2];
 	info.PhoneCl = record[3];
-	info.AccBlance = record[4];
+	info.AccBlance = ConvertstrTonbr(record[4]);
 
 	return info;
 }
