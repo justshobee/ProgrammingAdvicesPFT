@@ -1,0 +1,6 @@
+srand(time(NULL)) → seeds the random number generator with the current time
+so that rand() produces different numbers each run. Without it,
+rand() will give the same sequence every time.
+
+rand() % (To - From + 1) + From → generates a random number between From and To.
+% (To - From + 1) limits the range, and + From shifts it to start from From.
