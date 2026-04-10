@@ -1,0 +1,21 @@
+<1>
+
+The main() function is the entry point of the program.
+It simply calls "FunctionName()" to execute the main functionality and returns 0,
+indicating that the program has run successfully.
+
+<2>
+
+Senario : chi mra drti git add/commit/push onsity chi modification.
+Solutiion : N9adro ndir modification bla ma nzido chi commit khra fi nafs commit ,had plan more advanceeed.
+git add fileName
+git commit --amend --no-edit
+git push --force => hna ka tforce 3lih ydir la date dyal commit li drna db.
+
+<3>
+
+1-break: exits the loop or switch immediately.
+2-continue: skips the rest of the current loop iteration and moves to the next one.
+3-return: exits the function completely and returns a value (or nothing if void).
+
+yolo fix
