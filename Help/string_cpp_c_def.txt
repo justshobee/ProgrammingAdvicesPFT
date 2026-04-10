@@ -1,0 +1,29 @@
+
+## C string (C-style string)
+
+ It’s basically a char array:
+
+  char name[10] = "Mo";
+
+* Ends with a null terminator ('\0') so the program knows where the string stops.
+* You manage memory and size manually.
+* Easy to break if you go out of bounds → unsafe.
+* Functions to work with it: `strlen`, `strcpy`, `strcmp`, etc.
+
+## C++ string (std::string)
+
+* It’s a class (object), not just a raw array.
+* Manages memory automatically (dynamic size).
+* No need for a '\0' at the end.
+* Safe indexing, resizing, appending, etc.
+* Provides built-in methods:
+  `length()`, `size()`, `substr()`, `find()`, `append()`, …
+
+---
+
+## In short
+
+* C string = low-level, unsafe, char array + '\0'
+* C++ string = high-level, safe, dynamic, easy to work with
+
+
