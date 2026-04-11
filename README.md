@@ -10,7 +10,11 @@ A comprehensive, well-organized repository containing C and C++ programming exer
 - [Learning Paths](#learning-paths)
 - [Compilation and Execution](#compilation-and-execution)
 - [Repository Contents](#repository-contents)
+- [Learning Tips](#learning-tips)
 - [Contributing](#contributing)
+- [Learning Resources](#learning-resources)
+- [Support](#support)
+
 
 ## Overview
 
@@ -28,53 +32,39 @@ The repository contains hundreds of solved problems, from basic algorithmic chal
 
 ```
 ProgrammingAdvicesPFT/
-├── C++ Fundamentals/
-│   ├── 01-Basic Syntax and Data Types/
-│   ├── 02-Control Structures/
-│   ├── 03-Functions and Scope/
-│   ├── 04-Arrays and Strings/
-│   ├── 05-Object-Oriented Programming/
-│   └── ...
-│
-├── C++ Advanced Topics/
-│   ├── 01-Pointers and References/
-│   ├── 02-Dynamic Memory Allocation/
-│   ├── 03-Exception Handling/
-│   ├── 04-String Manipulation/
-│   ├── 05-Standard Library and STL/
-│   └── ...
-│
 ├── Algorithms & Problem-Solving Level 1/
-│   ├── Problem01.cpp through Problem49.cpp
-│   └── Projects/
-│
+│   └── 49 fundamental problem-solving exercises
 ├── Algorithms & Problem-Solving Level 2/
-│   ├── Problem#01.cpp through Problem#44.cpp
+│   ├── 44 intermediate to advanced problems
 │   └── C_Strings_Manipulation/
-│
 ├── Programming Using C++ - Level 1/
-│   ├── ex00/ through ex50/
-│   └── README.md
-│
+│   ├── Basic syntax and declarations (ex00-ex26)
+│   ├── LoopsExercises/
+│   ├── homeWork01-homeWork09/
+│   ├── ExerOfWeek/
+│   └── SolutionsFlowChartProblem/
 ├── Programming Using C++ - Level 2/
-│   └── (Advanced exercises)
-│
+│   ├── Pointers/
+│   ├── References/
+│   ├── Dynamic Memory Allocation/
+│   ├── Exception Handling/
+│   ├── Dealing With Strings/
+│   ├── More About Arrays/
+│   ├── More About Functions/
+│   ├── More About Variables/
+│   ├── Vectors Part I/
+│   ├── System Call/
+│   ├── Debugging C++ Code/
+│   ├── Printing & Formatting/
+│   ├── MakeFile/
+│   ├── Miscellaneous/
+│   └── Exrcices/
 ├── Help/
-│   ├── Reference Materials
-│   ├── Documentation
-│   ├── PDF Guides
-│   └── Code Tips
-│
-├── Documentation/
-│   ├── GETTING_STARTED.md
-│   ├── CODE_STYLE_GUIDE.md
-│   └── QUICK_REFERENCE.md
-│
-├── README.md (this file)
-├── GETTING_STARTED.md
-├── CONTRIBUTING.md
-├── LICENSE
-└── .gitignore
+│   ├── Reference materials
+│   ├── PDF guides and documentation
+│   └── Code tips and examples
+├── .gitignore
+└── README.md
 ```
 
 ## Getting Started
@@ -105,35 +95,33 @@ cd ProgrammingAdvicesPFT
 
 ### First Steps
 
-1. Read `GETTING_STARTED.md` for detailed setup instructions
-2. Choose a learning path that matches your current skill level
-3. Start with the recommended starting materials
-4. Compile and run examples as you progress
+1. Choose a learning path that matches your skill level
+2. Navigate to the appropriate folder
+3. Compile and run examples as you progress through them
+4. Consult the Help folder for reference materials when needed
 
 ## Learning Paths
 
 ### Path 1: Complete Beginner to Intermediate
 
-1. Start with **C++ Fundamentals** (syntax, data types, control structures)
-2. Progress to **C++ Advanced Topics** (pointers, memory management, STL)
-3. Practice with **Algorithms Level 1** (basic problem-solving)
-4. Advance to **Algorithms Level 2** (complex algorithms and optimization)
+1. Start with **Algorithms & Problem-Solving Level 1** for foundational problem-solving
+2. Progress to **Programming Using C++ - Level 1** for structured language learning
+3. Advance to **Programming Using C++ - Level 2** for advanced topics
+4. Challenge yourself with **Algorithms & Problem-Solving Level 2** for complex problems
 
-**Estimated Duration:** 3-6 months with consistent practice
+Estimated Duration: 3-6 months with consistent practice
 
 ### Path 2: Problem-Solving Focus
 
-1. Begin with **Algorithms Level 1** alongside **C++ Fundamentals**
-2. Deepen understanding with **C++ Advanced Topics**
-3. Challenge yourself with **Algorithms Level 2**
+1. Start with **Algorithms & Problem-Solving Level 1** while learning basics from **Programming Using C++ - Level 1**
+2. Deepen understanding with **Programming Using C++ - Level 2**
+3. Challenge yourself with **Algorithms & Problem-Solving Level 2**
 
-**Suitable for:** Those who prefer learning through problem-solving
+Suitable for: Those who prefer learning through problem-solving
 
-### Path 3: Quick Reference and Review
+### Path 3: Topic-Specific Learning
 
-- Use individual folders to find specific topics
-- Each directory contains focused examples and exercises
-- Reference materials available in the **Help** and **Documentation** folders
+Browse individual folders to find specific topics of interest. Each directory contains focused examples and exercises with clear progression.
 
 ## Compilation and Execution
 
@@ -164,17 +152,19 @@ g++ -std=c++17 -Wall -Wextra -g -o output_name source_file.cpp
 ./output_name < input.txt
 ```
 
-### Batch Compilation (Fish Shell)
+### Batch Compilation
 
-```fish
+Compile all C++ files in a directory:
+
+```bash
 for file in *.cpp
     g++ -std=c++17 -o (basename $file .cpp) $file
 end
 ```
 
-### Using Makefile for Larger Projects
+### Using Makefile
 
-Create a `Makefile`:
+For larger projects, create a `Makefile`:
 
 ```makefile
 CXX = g++
@@ -198,11 +188,10 @@ clean:
 .PHONY: all clean
 ```
 
-Compile and run:
+Then compile:
 
 ```bash
 make
-./program
 make clean
 ```
 
@@ -210,7 +199,7 @@ make clean
 
 ### Algorithms & Problem-Solving Level 1
 
-Contains 49 fundamental problem-solving exercises covering:
+49 fundamental problem-solving exercises covering:
 
 - Pattern recognition and output formatting
 - Loop-based algorithms
@@ -218,11 +207,11 @@ Contains 49 fundamental problem-solving exercises covering:
 - Basic mathematical operations
 - Simple string manipulations
 
-**Target:** Beginners developing problem-solving skills
+Target: Beginners developing problem-solving skills
 
 ### Algorithms & Problem-Solving Level 2
 
-Contains 44 intermediate to advanced problems with specialized modules:
+44 intermediate to advanced problems with specialized modules:
 
 - Advanced algorithmic thinking
 - Complex string manipulation
@@ -230,126 +219,68 @@ Contains 44 intermediate to advanced problems with specialized modules:
 - Multi-step problem solving
 - C-style string operations
 
-**Target:** Intermediate programmers strengthening algorithmic skills
+Target: Intermediate programmers strengthening algorithmic skills
 
 ### Programming Using C++ - Level 1
 
-Structured exercises (ex00 through ex50) covering:
+Structured exercises covering:
 
 - Basic syntax and declarations
 - Control flow structures
 - Function implementation
 - Array and vector operations
 - File input/output operations
+- Loop exercises
+- Homework assignments
+
+Target: Beginners learning C++ fundamentals
 
 ### Programming Using C++ - Level 2
 
-Advanced exercises and projects featuring:
-
-- Complex class design
-- Advanced data structures
-- Template programming
-- Real-world programming patterns
-
-## File Organization Standards
-
-All code files follow consistent naming conventions:
-
-- Problem files: `Problem##.cpp` or `Problem#01.cpp` (numbered sequentially)
-- Example files: Descriptive names related to topic
-- Compiled executables: Not committed (see `.gitignore`)
-- Headers: Consistent indentation and commenting
-
-## Documentation
-
-This repository includes several documentation files:
-
-- `GETTING_STARTED.md` - Detailed setup and first steps
-- `CONTRIBUTING.md` - Guidelines for contributing
-- `QUICK_REFERENCE.md` - Quick lookup for common tasks
-- `CODE_STYLE_GUIDE.md` - Standards used throughout the repository
-
-## Topics Covered
-
-### C++ Fundamentals
-
-- Variables and data types
-- Operators (arithmetic, logical, comparison, bitwise)
-- Control structures (if/else, switch, loops)
-- Functions (parameters, return values, overloading)
-- Arrays and C-style strings
-- Introduction to classes and objects
-
-### C++ Advanced Topics
+Advanced exercises and topics featuring:
 
 - Pointers and references
-- Dynamic memory allocation (new/delete)
-- Memory management and smart pointers
-- Exception handling (try/catch/throw)
-- String manipulation (std::string, C-strings)
-- Vectors and STL containers
-- File I/O and stream operations
-- System-level programming
-
-### Algorithms Level 1
-
-- Basic pattern recognition
-- Loop-based problem solving
-- Simple calculations and formulas
-- Number property analysis
-- Text processing basics
-
-### Algorithms Level 2
-
-- Complex problem decomposition
-- Advanced string algorithms
-- Performance optimization
-- Algorithm analysis and complexity
-- Real-world programming scenarios
+- Dynamic memory allocation
+- Exception handling
+- String manipulation
+- Data structures and vectors
+- File I/O and system calls
+- Debugging techniques
+- Build systems (Make)
 
 ## Learning Tips
 
-1. **Match your skill level:** Start at an appropriate difficulty level; skipping fundamentals weakens understanding
-2. **Type the code yourself:** Do not copy-paste; typing reinforces muscle memory and learning
-3. **Modify and experiment:** Change values, add features, test edge cases and error conditions
-4. **Understand the logic:** Focus on why code works, not just memorizing syntax
-5. **Practice consistently:** Regular practice is more effective than occasional marathon sessions
-6. **Use the resources:** Reference materials and guides are provided for difficult concepts
-7. **Debug actively:** Use debugging techniques to understand program flow and identify issues
+1. Start at a difficulty level that matches your current skills
+2. Type the code yourself rather than copy-pasting
+3. Modify and experiment with the code to understand it deeply
+4. Focus on understanding why code works, not just memorizing syntax
+5. Practice consistently rather than in marathon sessions
+6. Use the reference materials in the Help folder for difficult concepts
+7. Use debugging techniques to understand program flow
 
 ## Compilation Best Practices
 
-- Always include `-Wall` and `-Wextra` flags to catch potential issues
+- Include `-Wall` and `-Wextra` flags to catch potential issues
 - Use `-g` flag during development for debugging support
-- Use `-O2` or `-O3` flags for performance-critical code (when optimizing)
-- Test with multiple C++ standards (`-std=c++11`, `-std=c++17`)
+- Use `-O2` or `-O3` flags for performance-critical code when optimizing
+- Test with multiple C++ standards
 - Check for memory leaks using tools like Valgrind
 
 ## Contributing
 
-Contributions are welcome. Whether you've found improvements or new content:
-
-### How to Contribute
+Contributions are welcome. Whether you have improvements or new content:
 
 1. Fork the repository
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
 3. Make your changes with clear, well-documented code
-4. Commit with descriptive messages:
-   ```bash
-   git commit -m "Add: Description of your contribution"
-   ```
+4. Commit with descriptive messages
 5. Push and open a pull request
 
-### Guidelines
-
+Guidelines:
 - Keep code clean and maintainable
 - Add meaningful comments for complex logic
 - Follow existing naming and formatting conventions
 - Test code before submitting
-- Update documentation if adding new sections
 - Use descriptive commit messages
 
 ## Learning Resources
@@ -357,308 +288,16 @@ Contributions are welcome. Whether you've found improvements or new content:
 - C++ Reference Documentation: https://en.cppreference.com/
 - GeeksforGeeks C++ Tutorials: https://www.geeksforgeeks.org/c-plus-plus/
 - Cplusplus.com: http://www.cplusplus.com/
-- Compiler Flags Reference: https://gcc.gnu.org/onlinedocs/
+- GCC Documentation: https://gcc.gnu.org/onlinedocs/
 
-## Support and Questions
+## Support
 
 If you encounter issues or have questions:
 
 - Check existing issues on GitHub
-- Review documentation files in the repository
-- Consult the Help folder for reference materials
-- Open an issue with detailed description of your problem
-
-## Acknowledgments
-
-This repository represents years of learning and practical experience in C and C++ programming. It combines concepts from programming courses, community resources, and personal problem-solving experience.
+- Review the Help folder for reference materials
+- Open an issue with a detailed description of your problem
 
 ---
 
-**Last Updated:** April 2026
-
-For more information, visit the GitHub repository: https://github.com/justshobee/ProgrammingAdvicesPFT
-
-```
-ProgrammingAdvicesPFT/
-│
-├── 📘 C++ Fundamentals/
-│   ├── 01-Basic Syntax & Data Types/
-│   ├── 02-Control Structures/
-│   ├── 03-Functions & Scope/
-│   ├── 04-Arrays & Strings/
-│   ├── 05-Object-Oriented Programming/
-│   └── ...
-│
-├── 🚀 C++ Advanced Topics/
-│   ├── 01-Pointers & References/
-│   ├── 02-Dynamic Memory Allocation/
-│   ├── 03-Exception Handling/
-│   ├── 04-String Manipulation/
-│   ├── 05-Standard Library & Vectors/
-│   ├── 06-File I/O & System Calls/
-│   └── ...
-│
-├── 🧮 Algorithms & Data Structures Level 1/
-│   ├── 01-Basic Problem Solving/
-│   ├── 02-Loops & Iterations/
-│   ├── 03-Pattern Recognition/
-│   ├── 04-Simple Algorithms/
-│   └── ...
-│
-├── 🏆 Algorithms & Data Structures Level 2/
-│   ├── 01-Intermediate Problems/
-│   ├── 02-Advanced Algorithms/
-│   ├── 03-Complex Data Structures/
-│   ├── 04-String Manipulation/
-│   └── ...
-│
-├── 📚 Resources/
-│   ├── Documentation/
-│   ├── Reference Materials/
-│   ├── Code Tips & Tricks/
-│   └── PDFs & Guides/
-│
-├── .gitignore
-├── LICENSE
-└── README.md
-```
-
----
-
-## 🎓 Learning Paths
-
-### Path 1: Complete Beginner to Intermediate
-1. Start with **C++ Fundamentals** for core syntax
-2. Progress to **C++ Advanced Topics** for deeper understanding
-3. Practice with **Algorithms Level 1** for problem-solving basics
-4. Advance to **Algorithms Level 2** for complex problems
-
-### Path 2: Problem-Solving Focus
-1. Begin with **Algorithms Level 1** while learning **C++ Fundamentals**
-2. Deepen understanding with **C++ Advanced Topics**
-3. Challenge yourself with **Algorithms Level 2**
-
-### Path 3: Quick Reference
-- Use individual directories to quickly find specific topics
-- Each directory contains focused examples and exercises
-- Reference materials available in the **Resources** folder
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-You'll need a C/C++ compiler installed on your system:
-
-- **Linux/macOS**: GCC or Clang (usually pre-installed)
-  ```fish
-  # Ubuntu/Debian
-  sudo apt update && sudo apt install build-essential
-
-  # macOS (with Homebrew)
-  brew install gcc
-  ```
-
-- **Windows**: MinGW or Visual Studio
-  - [MinGW Installation Guide](https://www.mingw-w64.org/)
-  - Or use [Visual Studio Community](https://visualstudio.microsoft.com/)
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/justshobee/ProgrammingAdvicesPFT.git
-cd ProgrammingAdvicesPFT
-```
-
----
-
-## 🛠️ Compilation & Execution
-
-### Compiling C++ Files
-
-**Basic compilation:**
-```bash
-g++ -o output_name source_file.cpp
-```
-
-**With C++17 standard:**
-```bash
-g++ -std=c++17 -o output_name source_file.cpp
-```
-
-**With debugging info and warnings:**
-```bash
-g++ -std=c++17 -Wall -Wextra -g -o output_name source_file.cpp
-```
-
-### Running Executables
-
-```bash
-# On Linux/macOS
-./output_name
-
-# Or
-./output_name < input.txt  # With input redirection
-```
-
-### Batch Compilation
-
-To compile multiple files in a directory:
-
-```bash
-# Compile all .cpp files in current directory
-for file in *.cpp
-    g++ -std=c++17 -o (basename $file .cpp) $file
-end
-```
-
-### Using Make
-
-For larger projects, we recommend creating a `Makefile`:
-
-```makefile
-CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra
-
-all: program
-
-program: source.cpp
-	$(CXX) $(CXXFLAGS) -o program source.cpp
-
-clean:
-	rm -f program *.o
-```
-
-Then compile with:
-```bash
-make
-make clean  # to remove compiled files
-```
-
----
-
-## 📂 File Organization
-
-### Naming Conventions
-
-- **Problem files**: `Problem##.cpp` or `problem##.cpp` (numbered sequentially)
-- **Example files**: `example_name.cpp` (descriptive names)
-- **Topic folders**: Clear, descriptive names with topics organized hierarchically
-- **Compiled files**: Should not be committed (see `.gitignore`)
-
-### Documentation
-
-Each major section should contain:
-- **README.md** (optional but recommended): Overview of topics covered
-- **Code comments**: Inline explanations for complex logic
-- **Clear variable names**: Self-documenting code
-- **Sample input/output**: In file comments or separate files
-
----
-
-## 📋 Topics Covered
-
-### C++ Fundamentals
-- Variables and Data Types
-- Operators (arithmetic, logical, comparison)
-- Control Structures (if/else, loops, switch)
-- Functions (parameters, return values, scope)
-- Arrays and Strings
-- Introduction to OOP (classes, objects)
-
-### C++ Advanced
-- Pointers and References
-- Dynamic Memory (new/delete)
-- Exception Handling (try/catch/throw)
-- String Manipulation and C-strings
-- Vectors and STL Containers
-- File I/O Operations
-- System Calls
-- Make and Compilation
-
-### Algorithms Level 1
-- Pattern Recognition
-- Loop-based Problem Solving
-- Simple Calculations
-- Basic String Operations
-- Number Properties (palindromes, digits, etc.)
-
-### Algorithms Level 2
-- Complex Problem Solving
-- Advanced String Manipulation
-- Multi-step Algorithms
-- Optimization Techniques
-- Algorithm Analysis
-
----
-
-## 💡 Tips for Using This Repository
-
-1. **Start with a level that matches your skill**: Don't skip levels; foundational understanding is crucial
-2. **Type the code yourself**: Don't just copy-paste; typing helps reinforce learning
-3. **Modify and experiment**: Change values, add features, test edge cases
-4. **Understand before memorizing**: Focus on why the code works, not just what it does
-5. **Keep a learning journal**: Note what you learned from each problem
-6. **Practice regularly**: Consistency is more important than marathon sessions
-
----
-
-## Contributing
-
-Contributions are welcome. Whether you've found improvements or new content:
-
-### How to Contribute
-
-1. Fork the repository
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Make your changes with clear, well-documented code
-4. Commit with descriptive messages:
-   ```bash
-   git commit -m "Add: Description of your contribution"
-   ```
-5. Push and open a pull request
-
-### Guidelines
-
-- Keep code clean and maintainable
-- Add meaningful comments for complex logic
-- Follow existing naming and formatting conventions
-- Test code before submitting
-- Update documentation if adding new sections
-- Use descriptive commit messages
-
-## Learning Resources
-
-- C++ Reference Documentation: https://en.cppreference.com/
-- GeeksforGeeks C++ Tutorials: https://www.geeksforgeeks.org/c-plus-plus/
-- Cplusplus.com: http://www.cplusplus.com/
-- Compiler Flags Reference: https://gcc.gnu.org/onlinedocs/
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-You are free to use, modify, and distribute this code in accordance with the license terms.
-
-## Support and Questions
-
-If you encounter issues or have questions:
-
-- Check existing issues on GitHub
-- Review documentation files in the repository
-- Consult the Help folder for reference materials
-- Open an issue with detailed description of your problem
-
-## Acknowledgments
-
-This repository represents years of learning and practical experience in C and C++ programming. It combines concepts from programming courses, community resources, and personal problem-solving experience.
-
----
-
-**Last Updated:** April 2026
-
-For more information, visit the GitHub repository: https://github.com/justshobee/ProgrammingAdvicesPFT
+**Repository:** https://github.com/justshobee/ProgrammingAdvicesPFT
