@@ -11,7 +11,6 @@ A comprehensive, well-organized repository containing C and C++ programming exer
 - [Compilation and Execution](#compilation-and-execution)
 - [Repository Contents](#repository-contents)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -359,12 +358,6 @@ Contributions are welcome. Whether you've found improvements or new content:
 - GeeksforGeeks C++ Tutorials: https://www.geeksforgeeks.org/c-plus-plus/
 - Cplusplus.com: http://www.cplusplus.com/
 - Compiler Flags Reference: https://gcc.gnu.org/onlinedocs/
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-You are free to use, modify, and distribute this code in accordance with the license terms.
 
 ## Support and Questions
 
